@@ -2,11 +2,13 @@ public class Savings extends Account{
 
     //properties of this class
     int safetyDepositID;
-    int SafetyDepositKey;
+    int safetyDepositKey;
 
     //constructors
     public Savings(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
+        setRate();
+        accNum = "1"+accNum;
         this.ssn = ssn;
     }
 
@@ -21,10 +23,33 @@ public class Savings extends Account{
     }
 
     public int getSafetyDepositKey() {
-        return SafetyDepositKey;
+        return safetyDepositKey;
     }
 
     public void setSafetyDepositKey(int safetyDepositKey) {
-        SafetyDepositKey = safetyDepositKey;
+        safetyDepositKey = safetyDepositKey;
+    }
+
+    public void showInfo(){
+        System.out.println("Account type: Savings");
+        super.showInfo();
+        System.out.println(
+                "Features"+
+                "\nSafety Deposit Box ID: "+
+                safetyDepositID+
+                "\nSafety Deposit Key: "+
+                safetyDepositKey+
+                "Rate: " + rate
+        );
+
+    }
+
+    public void setRate(){
+        rate = baseRate() - .25;
+    }
+
+    private void setSafetyBox(){
+        safetyDepositID =(int) (Math.random() * Math.pow(10,3));
+        safetyDepositKey = (int) (Math.random() * Math.pow(10,4));
     }
 }

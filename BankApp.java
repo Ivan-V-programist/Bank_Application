@@ -4,7 +4,7 @@ public class BankApp {
 
         Savings save1 = new Savings("Johny", "123456", 100.0);
 
-        //read csv and create necessary acc
+        
 
     }
 }
