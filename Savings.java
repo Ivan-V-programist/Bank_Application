@@ -1,15 +1,14 @@
 public class Savings extends Account{
 
     //properties of this class
-    int safetyDepositID;
-    int safetyDepositKey;
+    private int safetyDepositID;
+    private int safetyDepositKey;
 
     //constructors
     public Savings(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
         setRate();
         accNum = "1"+accNum;
-        this.ssn = ssn;
     }
 
     //methods
@@ -39,7 +38,7 @@ public class Savings extends Account{
                 safetyDepositID+
                 "\nSafety Deposit Key: "+
                 safetyDepositKey+
-                "Rate: " + rate
+                "\nRate: " + rate
         );
 
     }

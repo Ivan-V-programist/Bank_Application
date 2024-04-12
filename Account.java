@@ -1,11 +1,11 @@
 public abstract class Account implements Rate{
-    String name;
-    String ssn;
-    double balance;
-    static int index=10000;
+    private String name;
+    private String ssn;
+    protected double balance;
+    private static int index=10000;
 
-    String accNum;
-    Double rate;
+    protected String accNum;
+    protected Double rate;
 
 
     public Account(String name,  String ssn, double initDeposit) {

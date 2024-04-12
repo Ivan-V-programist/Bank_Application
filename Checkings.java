@@ -1,7 +1,7 @@
 public class Checkings extends Account {
     //properties of this class
-    int cardNum;
-    int pin;
+    private int cardNum;
+    private int pin;
 
     //constructors
     public Checkings(String name, String  ssn, double initDeposit) {
@@ -9,7 +9,6 @@ public class Checkings extends Account {
         setRate();
         accNum = "2"+accNum;
         setDebitCard();
-        this.ssn = ssn;
         this.balance = initDeposit;
 
     }
@@ -28,16 +27,16 @@ public class Checkings extends Account {
 
 
 
-    public void showInfo(){
-        System.out.println("Account type: Checking");
+     public void showInfo(){
         super.showInfo();
+        System.out.println("Account type: Checking");
         System.out.println(
                 "Features"+
                         "\nCard Number: "+
                         cardNum+
                         "\nPIN: "+
                         pin+
-                        "Rate: " + rate
+                        "\nRate: " + rate
         );
 
     }
